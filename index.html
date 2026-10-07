@@ -3,21 +3,139 @@
 
 <head>
 
-    <!-- Define la codificación de caracteres del documento -->
+    <!-- Define la codificación de caracteres utilizada por el documento. -->
     <meta charset="UTF-8">
 
-    <!-- Título que aparece en la pestaña del navegador -->
-    <title>Prueba GitHub Pages</title>
+    <!-- Permite adaptar la página a diferentes tamaños de pantalla. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña del navegador. -->
+    <title>Introducción a la Graficación 2D</title>
+
+    <style>
+
+        /* Configuración general de la página. */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        /* Título principal de la práctica. */
+        h1 {
+            color: #222;
+        }
+
+        /* Contenedor de los botones. */
+        .botones {
+            margin: 20px auto;
+            max-width: 900px;
+        }
+
+        /* Estilo general de los botones. */
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #02457A;
+            color: white;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        /* Cambio visual cuando el cursor pasa sobre un botón. */
+        button:hover {
+            background-color: #018ABE;
+        }
+
+        /* Área de dibujo. */
+        canvas {
+            background-color: white;
+            border: 2px solid #333;
+            margin-top: 10px;
+        }
+
+        /* Texto que indica el ejercicio actual. */
+        #ejercicio {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px;
+            color: #02457A;
+        }
+
+    </style>
 
 </head>
 
-<body>
 
-    <!-- Título principal que se mostrará en la página -->
-    <h1>PRUEBA GITHUB PAGES</h1>
+<body onload="draw()">
 
-    <!-- Texto de comprobación -->
-    <p>Mi página de GitHub Pages funciona correctamente.</p>
+    <!-- Título principal. -->
+    <h1>Introducción a la Graficación 2D</h1>
+
+    <!-- Nombre del ejercicio que se está mostrando. -->
+    <div id="ejercicio">
+        Ejemplo inicial: Rectángulo verde
+    </div>
+
+
+    <!--
+        Botones utilizados para cambiar entre
+        los diferentes ejercicios.
+    -->
+    <div class="botones">
+
+        <button onclick="mostrarEjercicio(0)">
+            Ejemplo inicial
+        </button>
+
+        <button onclick="mostrarEjercicio(1)">
+            Rectángulo
+        </button>
+
+        <button onclick="mostrarEjercicio(2)">
+            Triángulo
+        </button>
+
+        <button onclick="mostrarEjercicio(3)">
+            Happy Face
+        </button>
+
+        <button onclick="mostrarEjercicio(4)">
+            Líneas
+        </button>
+
+        <button onclick="mostrarEjercicio(5)">
+            Arcos
+        </button>
+
+        <button onclick="mostrarEjercicio(6)">
+            Curvas
+        </button>
+
+        <button onclick="mostrarEjercicio(7)">
+            Combinación
+        </button>
+
+    </div>
+
+
+    <!--
+        Canvas:
+        área donde JavaScript realizará los dibujos.
+    -->
+    <canvas
+        id="canvas"
+        width="600"
+        height="450">
+    </canvas>
+
+
+    <!-- Conecta el archivo JavaScript con el documento HTML. -->
+    <script src="main.js"></script>
 
 </body>
 
